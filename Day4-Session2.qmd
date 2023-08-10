@@ -8,3 +8,48 @@ editor: visual
 ## Day 4: Session 2
 
 ### Statistics in R
+
+```{r}
+library(tidyverse)
+library(GGally)
+library(skimr)
+library(palmerpenguins)
+
+```
+
+#### Basic Data Exploration
+
+```{r}
+view(penguins)
+
+names(penguins)
+
+
+
+```
+
+```{r}
+dim(penguins)
+
+head(penguins)
+
+tail(penguins)
+
+
+
+```
+
+```{r}
+summary(penguins)
+
+```
+
+Skimr
+
+```{r}
+skim(penguins)
+```
+
+```{r}
+ggpairs(penguins)
+```
