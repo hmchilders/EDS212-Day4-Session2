@@ -1,0 +1,10 @@
+---
+title: "Day 4 Session 2"
+author: "Heather Childers"
+format: html
+editor: visual
+---
+
+## Day 4: Session 2
+
+### Statistics in R
