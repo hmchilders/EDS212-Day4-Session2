@@ -3,6 +3,9 @@ title: "Day 4 Session 2"
 author: "Heather Childers"
 format: html
 editor: visual
+
+execute: 
+  warning: false
 ---
 
 ## Day 4: Session 2
@@ -52,4 +55,29 @@ skim(penguins)
 
 ```{r}
 ggpairs(penguins)
+```
+
+```{r}
+  #select(species, body_mass_g, ends_with("_mm")) %>% 
+  #GGally::ggpairs(aes(color = species)) +
+  #scale_colour_manual(values = c("darkorange","purple","cyan4")) +
+  #scale_fill_manual(values = c("darkorange","purple","cyan4"))
+```
+
+### Exploratory charts
+
+Example 1: Histogram
+
+```{r}
+ggplot(data=penguins, aes(x = flipper_length_mm))+
+  geom_histogram( aes(fill=species), 
+                  color="navy") 
+```
+
+```{r}
+ggplot(data=penguins, aes(x = flipper_length_mm, y = body_mass_g))+
+  geom_boxplot( fill = "grey",
+                aes(color = species)) +
+  geom_jitter(color = "yellow", aes(size= bill_depth_mm))
+  theme_light()
 ```
